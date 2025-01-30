@@ -23,6 +23,8 @@ export default async function Page({ params }) {
         notFound()
         
       }
+      //changes main 
+
       
       const filename = fs.readFileSync(path,"utf-8")
         const blog= matter(filename)
