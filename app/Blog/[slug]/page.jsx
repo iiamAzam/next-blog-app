@@ -1,4 +1,3 @@
-
 import fs from 'fs'
 import matter from "gray-matter"
 import { notFound } from 'next/navigation'
@@ -19,6 +18,7 @@ import rehypeSlug from 'rehype-slug'
 export default async function Page({ params }) {
   const prm = await params
       const path  = `content/${prm.slug}.md`
+      console.log(path);
       if(!fs.existsSync(path)){
         notFound()
         
