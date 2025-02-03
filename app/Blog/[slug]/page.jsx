@@ -17,7 +17,7 @@ import rehypeSlug from 'rehype-slug'
 export default async function Page({ params }) {
   const prm = await params
 
-      const path  = `content/${prm.slug}.md`
+      const path  = `content/${prm.slug}`
       if(!fs.existsSync(path)){
         notFound()
       }
