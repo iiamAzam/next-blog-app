@@ -83,7 +83,7 @@ const BlogPostCard = ({ post }) => {
           {post.data.excerpt}
         </p>
         <div className="flex justify-between items-center">
-          <Link href={`app/Blog/${post.data.slug}`} className="
+          <Link href={`Blog/${post.data.slug}`} className="
             text-blue-600 dark:text-blue-400 
             hover:underline flex items-center
           ">
