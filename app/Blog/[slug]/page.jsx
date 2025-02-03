@@ -14,18 +14,15 @@ import OnThisPage from '@/app/com/onthis'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
 
-
 export default async function Page({ params }) {
   const prm = await params
-  
+
       const path  = `content/${prm.slug}.md`
       if(!fs.existsSync(path)){
         notFound()
       }
       //changes main 
-      console.log("it not " + path)
       const filename = fs.readFileSync(path,"utf-8")
-      
         const blog= matter(filename)
         // conavert markdown to html 
    const precessor = await unified()
